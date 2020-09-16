@@ -24,6 +24,10 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path= 
+        - id: review
+          uri: http://localhost:8085
+          predicates:
+            - Path=/reviews/** 
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -58,7 +62,11 @@ spring:
         - id: sms
           uri: http://admin19-flower-sms:8080
           predicates:
-            - Path= 
+            - Path=
+        - id: review
+          uri: http://admin19-flower-review:8080
+          predicates:
+            - Path=/reviews/** 
       globalcors:
         corsConfigurations:
           '[/**]':
